@@ -1,5 +1,5 @@
 window.PODCLASH_CONFIG = Object.freeze({
-  spreadsheetId: "1s_uPSWx_LeH7F25IS8tzDvaSDLw4yP3B",
+  spreadsheetId: "1DHmRKP527wxSj7KLUPKFF-P7kFMpl9W6cChnou0VPv8",
   sheetName: "7-Day Rolling Schedule",
   refreshIntervalMs: 60000,
 
