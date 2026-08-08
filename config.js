@@ -1,5 +1,5 @@
 window.PODCLASH_CONFIG = Object.freeze({
-  spreadsheetId: "1s_uPSWx_LeH7F25IS8tzDvaSDLw4yP3B",
+  spreadsheetId: "1DHmRKP527wxSj7KLUPKFF-P7kFMpl9W6cChnou0VPv8",
   sheets: {
     dashboard: "CWL Dashboard",
     schedule: "7-Day Rolling Schedule",
@@ -12,7 +12,7 @@ window.PODCLASH_CONFIG = Object.freeze({
   // Therefore Day 1 starts 2 Aug 2026 at 19:58 GMT+7.
   // If the Dashboard later contains a row labelled "CWL DAY 1 START",
   // the live spreadsheet value will override this fallback automatically.
-  fallbackDay1StartIso: "2026-08-02T19:58:00+07:00",
+  fallbackDay1StartIso: "2026-08-02T19:59:00+07:00",
 
   clanName: "Globe Homie",
   clanTag: "#2U80PYQG8",
