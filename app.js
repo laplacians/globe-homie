@@ -331,6 +331,10 @@ function totalClanDestruction(){
   );
 }
 
+function hasAnyNA(m){
+  return Array.isArray(m.days) && m.days.includes("IN_NA");
+}
+
 function dailyStars(day){
   return members.reduce(
     (sum,m)=>sum+(typeof m.stars[day-1]==="number"?m.stars[day-1]:0),
@@ -700,7 +704,7 @@ function renderTopThree(){
   const root=$("topThree");
   root.innerHTML="";
 
-  performanceList("TOTAL").slice(0,3).forEach((m,i)=>{
+  performanceList("TOTAL").filter(m=>!hasAnyNA(m)).slice(0,3).forEach((m,i)=>{
     const e=efficiency(m);
     const attacks=completedAttacks(m);
     const stars=totalStars(m);
@@ -754,10 +758,14 @@ function renderLeaderboard(){
 
   const list=performanceList(leaderFilter);
 
-  list.forEach((m,i)=>{
-    const totalMode=leaderFilter==="TOTAL";
-    const day=totalMode?7:Number(leaderFilter.slice(1));
+  function appendSectionLabel(text, className=""){
+    const div=document.createElement("div");
+    div.className=`leader-section mono ${className}`.trim();
+    div.textContent=text;
+    root.appendChild(div);
+  }
 
+  function appendMemberRow(m,rank,totalMode,day,isNAGroup=false){
     const stars=totalMode
       ? totalStars(m)
       : (typeof m.stars[day-1]==="number"?m.stars[day-1]:null);
@@ -773,7 +781,7 @@ function renderLeaderboard(){
     const avgDest=playerAvgDestruction(m);
 
     const row=document.createElement("div");
-    row.className="leader-row";
+    row.className=`leader-row${isNAGroup?" leader-row-na":""}`;
     row.tabIndex=0;
     row.setAttribute("role","button");
 
@@ -789,8 +797,8 @@ function renderLeaderboard(){
     }
 
     row.innerHTML=`
-      <div class="mono leader-muted">${pad(i+1)}</div>
-      <div class="leader-name"></div>
+      <div class="mono leader-muted">${pad(rank)}</div>
+      <div class="leader-name${isNAGroup?" leader-na-name":""}"></div>
       <div class="mono leader-muted">TH${m.th}</div>
       <div class="stars-visual">${starText}</div>
       <div class="mono">${attacks}</div>
@@ -798,7 +806,8 @@ function renderLeaderboard(){
       <div class="mono">${avgDest===null?"—":`${avgDest.toFixed(1)}/100`}</div>
     `;
 
-    row.querySelector(".leader-name").textContent=m.name;
+    row.querySelector(".leader-name").textContent=
+      isNAGroup ? `${m.name} (N/A)` : m.name;
 
     row.addEventListener("click",()=>openDetail(m));
     row.addEventListener("keydown",e=>{
@@ -806,6 +815,33 @@ function renderLeaderboard(){
     });
 
     root.appendChild(row);
+  }
+
+  if(leaderFilter==="TOTAL"){
+    const eligible=list.filter(m=>!hasAnyNA(m));
+    const noBonus=list.filter(m=>hasAnyNA(m));
+
+    appendSectionLabel("CWL BONUS ELIGIBLE");
+
+    eligible.forEach((m,i)=>{
+      appendMemberRow(m,i+1,true,7,false);
+    });
+
+    if(noBonus.length){
+      appendSectionLabel("NO BONUS · N/A HISTORY","leader-section-na");
+
+      noBonus.forEach((m,i)=>{
+        appendMemberRow(m,i+1,true,7,true);
+      });
+    }
+
+    return;
+  }
+
+  const day=Number(leaderFilter.slice(1));
+
+  list.forEach((m,i)=>{
+    appendMemberRow(m,i+1,false,day,false);
   });
 }
 
