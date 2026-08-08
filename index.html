@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0c1117">
+<title>POD CLASH — Globe Homie CWL</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="config.js"></script>
+<script defer src="fallback-data.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+<noscript><div class="noscript">JavaScript is disabled. Live schedule, performance data, search, and member details require JavaScript.</div></noscript>
+
+<header>
+  <div class="container nav">
+    <div class="brand">POD CLASH</div>
+    <div class="nav-actions">
+      <a class="btn primary nav-clan" id="clanLink" href="#">Open Clan</a>
+      <a class="btn nav-discord" id="discordLink" href="#">Discord</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Globe Homie · CWL Operations</div>
+      <h1>Globe Homie<br>CWL Rolling Schedule</h1>
+      <p class="sub">Gold League I · 30v30 · GMT+7</p>
+      <div class="meta"><span class="mono">#2U80PYQG8</span><span class="mono">SINCE 16 JULY 2026</span></div>
+      <div class="announcement">CHECK YOUR SCHEDULE. ATTACK YOUR ASSIGNED NUMBER. FIGHT AS ONE.</div>
+    </div>
+  </section>
+
+  <section class="overview-section">
+    <div class="container">
+      <div class="section-label mono">Overview</div>
+      <div class="card overview-card">
+        <article class="overview-metric">
+          <div class="metric-top"><span>STARS</span><strong id="overviewStars">— / 630</strong></div>
+          <div class="progress"><span id="starsBar"></span></div>
+          <div class="metric-note mono" id="starsNote">Full CWL target</div>
+        </article>
+        <article class="overview-metric">
+          <div class="metric-top"><span>ATTACKS</span><strong id="overviewAttacks">— / —</strong></div>
+          <div class="progress"><span id="attacksBar"></span></div>
+          <div class="metric-note mono">Completed / eligible attacks</div>
+        </article>
+        <article class="overview-metric">
+          <div class="metric-top"><span>DESTRUCTION</span><strong id="overviewDestruction">— / 100%</strong></div>
+          <div class="progress"><span id="destructionBar"></span></div>
+          <div class="metric-note mono">Weighted clan average</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="war-section">
+    <div class="container grid2">
+      <article class="card summary">
+        <div class="summary-top"><div><div class="kicker mono">Current war</div><h2 id="currentDayTitle">Day 6</h2></div><div class="chip active mono" id="currentPhase">ACTIVE</div></div>
+        <div class="countdown"><div class="label" id="currentCountdownLabel">Ends in</div><div class="value mono" id="currentCountdown">01H 46M</div></div>
+        <div class="stats">
+          <div class="stat"><b id="currentIn">30 in lineup</b><span>Current roster</span></div>
+          <div class="stat"><b id="currentAttack">— attack required</b><span>Eligible lineup</span></div>
+          <div class="stat"><b id="currentNoAttack">— no attack</b><span>IN · N/A</span></div>
+        </div>
+      </article>
+      <article class="card summary" id="nextWarCard">
+        <div class="summary-top"><div><div class="kicker mono" id="nextWarKicker">Next war</div><h2 id="nextDayTitle">Day 7</h2></div><div class="chip prep mono" id="nextPhase">PREPARATION</div></div>
+        <div class="countdown"><div class="label" id="nextCountdownLabel">Starts in</div><div class="value mono" id="nextCountdown">01H 46M</div></div>
+        <div class="stats">
+          <div class="stat"><b id="nextIn">30 scheduled</b><span>Next roster</span></div>
+          <div class="stat"><b id="nextAttack">— eligible attacks</b><span>Planned attackers</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="quick-nav-section">
+    <div class="container">
+      <nav class="quick-nav" aria-label="CWL sections">
+        <a href="#schedule">Schedule</a>
+        <a href="#performance">Performance</a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section search-section">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="section-label mono">Member lookup</div><h3>Find Member</h3><div class="lead">Search an in-game name to view schedule and performance together.</div></div>
+      </div>
+      <div class="card search-card">
+        <input id="searchInput" class="search-input" type="search" placeholder="Search member name..." autocomplete="off">
+        <div id="searchResults" class="results"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="schedule">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="section-label mono">Schedule</div><h3>7-Day Rolling Schedule</h3><div class="lead">Daily lineup order is renumbered sequentially from the spreadsheet row order.</div></div>
+        <div class="sync"><div class="sync-dot" id="syncDot"></div><div class="sync-meta mono" id="syncMeta">Loading CWL data…</div><button class="btn" id="refreshBtn" type="button">Refresh Data</button></div>
+      </div>
+      <div class="day-tabs" id="dayTabs"></div>
+      <div class="card lineup-card">
+        <div class="lineup-toolbar"><div><div class="lineup-title" id="lineupTitle">Day 6 Lineup</div><div class="lineup-phase mono" id="lineupPhase">ACTIVE</div></div><div class="lineup-count mono" id="lineupCount">— / 30</div></div>
+        <div class="group-title">In lineup</div>
+        <div id="inList"></div>
+        <div id="naGroup">
+          <div class="group-title">In · No attack</div>
+          <div id="naList"></div>
+        </div>
+        <div class="collapse">
+          <button class="collapse-btn" id="restingToggle" type="button"><span>Show resting members</span><span class="mono" id="restingCount">0</span></button>
+          <div class="collapse-content" id="restingContent"><div id="outList"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="performance">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="section-label mono">Performance</div><h3>CWL Performance</h3><div class="lead">Efficiency first: stars per completed attack, then destruction, total stars, and attack count.</div></div>
+      </div>
+
+      <div class="performance-grid">
+        <article class="card daily-card">
+          <div class="card-head"><div><div class="kicker mono">Clan stars</div><h4>Daily Performance</h4></div><div class="mono total-small" id="dailyTotalStars">— ★ total</div></div>
+          <div class="daily-bars" id="dailyBars"></div>
+        </article>
+
+        <article class="card top-card">
+          <div class="card-head"><div><div class="kicker mono">Overview</div><h4>Top 3 Performance</h4></div></div>
+          <div id="topThree" class="top-three"></div>
+        </article>
+      </div>
+
+      <div class="leaderboard-head">
+        <div>
+          <h4>Leaderboard</h4>
+          <div class="lead">Daily filters exclude OUT members. Total includes the full registered roster.</div>
+        </div>
+        <div class="leader-tabs" id="leaderTabs"></div>
+      </div>
+      <div class="card leaderboard-card">
+        <div class="leader-row leader-header mono">
+          <div>#</div><div>MEMBER</div><div>TH</div><div>STARS</div><div>ATK</div><div>EFF</div><div>DEST</div>
+        </div>
+        <div id="leaderboard"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card rule">
+        <div><strong>CWL Rule</strong><span>Attack the same number as your lineup position unless instructed otherwise by the leader.</span></div>
+        <div class="rule-tag mono">ATTACK YOUR NUMBER</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-quote">NO MATTER WHERE WE COME FROM, WE FIGHT AS ONE.</div>
+      <div class="footer-meta mono"><div>#2U80PYQG8</div><div>SINCE 16 JULY 2026</div></div>
+    </div>
+    <div class="credit">© 2026 LYVRA Studio × PODCLASH.</div>
+  </div>
+</footer>
+
+<div class="backdrop" id="backdrop"></div>
+<aside class="detail" id="detail" aria-hidden="true">
+  <div class="detail-head">
+    <div><h4 id="detailName">Member</h4><div class="member-meta mono" id="detailMeta">TH—</div></div>
+    <button class="close" id="closeDetail" type="button" aria-label="Close member detail">×</button>
+  </div>
+  <div class="detail-body" id="detailBody"></div>
+</aside>
+</body>
+</html>
