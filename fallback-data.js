@@ -10,7 +10,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      3,
+      2,
+      1,
+      1,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 13,
+    "avgDestruction": 0
   },
   {
     "name": "VAREN (1)",
@@ -23,7 +35,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 17,
+    "avgDestruction": 0
   },
   {
     "name": "VAREN (2)",
@@ -36,10 +60,22 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 15,
+    "avgDestruction": 0
   },
   {
-    "name": "azitN_",
+    "name": "aiztN_",
     "th": 16,
     "days": [
       "IN",
@@ -49,7 +85,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 15,
+    "avgDestruction": 0
   },
   {
     "name": "VAREN (3)",
@@ -62,10 +110,22 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 15,
+    "avgDestruction": 0
   },
   {
-    "name": "INCARAN JANDA",
+    "name": "İNCARAN JANDA",
     "th": 16,
     "days": [
       "IN",
@@ -75,7 +135,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      3,
+      2,
+      3,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 14,
+    "avgDestruction": 0
   },
   {
     "name": "VAREN (4)",
@@ -88,10 +160,22 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      2,
+      3,
+      3,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 14,
+    "avgDestruction": 0
   },
   {
-    "name": "imRan 06",
+    "name": "İmRan 06",
     "th": 15,
     "days": [
       "IN",
@@ -101,7 +185,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      2,
+      3,
+      3,
+      3,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 17,
+    "avgDestruction": 0
   },
   {
     "name": "VAREN (5)",
@@ -114,7 +210,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      2,
+      2,
+      3,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 13,
+    "avgDestruction": 0
   },
   {
     "name": "VAREN (6)",
@@ -127,7 +235,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      3,
+      2,
+      3,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 14,
+    "avgDestruction": 0
   },
   {
     "name": "VAREN (7)",
@@ -140,7 +260,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      null,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 15,
+    "avgDestruction": 0
   },
   {
     "name": "King Frozen",
@@ -149,11 +281,23 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN",
+      "IN_NA",
+      "IN_NA",
       "IN",
-      "IN",
-      "IN",
-      "IN"
-    ]
+      "OUT"
+    ],
+    "stars": [
+      3,
+      3,
+      2,
+      "IN_NA",
+      "IN_NA",
+      0,
+      "OUT"
+    ],
+    "dashboardTotalWarsIn": 4,
+    "dashboardTotalStars": 8,
+    "avgDestruction": 0
   },
   {
     "name": "Bibol",
@@ -166,7 +310,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      2,
+      2,
+      1,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 11,
+    "avgDestruction": 0
   },
   {
     "name": "VAREN (8)",
@@ -174,12 +330,24 @@ window.PODCLASH_FALLBACK = [
     "days": [
       "IN",
       "IN",
-      "IN",
+      "IN_NA",
       "IN",
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      "IN_NA",
+      3,
+      1,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 6,
+    "dashboardTotalStars": 10,
+    "avgDestruction": 0
   },
   {
     "name": "Angelina ❤️",
@@ -192,7 +360,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 15,
+    "avgDestruction": 0
   },
   {
     "name": "SATORU GOJO",
@@ -201,11 +381,23 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN",
-      "IN",
-      "IN",
+      "IN_NA",
+      "IN_NA",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      2,
+      "IN_NA",
+      "IN_NA",
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 5,
+    "dashboardTotalStars": 8,
+    "avgDestruction": 0
   },
   {
     "name": "SVARA",
@@ -218,7 +410,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      3,
+      3,
+      1,
+      1,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 14,
+    "avgDestruction": 0
   },
   {
     "name": "VAREN (9)",
@@ -226,12 +430,24 @@ window.PODCLASH_FALLBACK = [
     "days": [
       "IN",
       "IN",
-      "IN",
+      "IN_NA",
       "IN",
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      "IN_NA",
+      1,
+      2,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 6,
+    "dashboardTotalStars": 9,
+    "avgDestruction": 0
   },
   {
     "name": "VAREN (10)",
@@ -244,7 +460,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      1,
+      1,
+      3,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 11,
+    "avgDestruction": 0
   },
   {
     "name": "Ruth Sovereign",
@@ -254,10 +482,22 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN",
-      "OUT",
-      "OUT",
+      "IN",
+      "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      3,
+      1,
+      3,
+      null,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 13,
+    "avgDestruction": 0
   },
   {
     "name": "CRaZy-MiNi",
@@ -270,7 +510,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      2,
+      2,
+      2,
+      1,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 13,
+    "avgDestruction": 0
   },
   {
     "name": "BayyVinsmoke",
@@ -280,13 +532,25 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN",
-      "IN",
+      "IN_NA",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      2,
+      2,
+      "IN_NA",
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 6,
+    "dashboardTotalStars": 10,
+    "avgDestruction": 0
   },
   {
-    "name": "yaaa b1",
+    "name": "Yaaa b1",
     "th": 13,
     "days": [
       "IN",
@@ -296,10 +560,22 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      2,
+      2,
+      2,
+      2,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 14,
+    "avgDestruction": 0
   },
   {
-    "name": "IRENE Seiyoku",
+    "name": "IRENE Séiyoku",
     "th": 12,
     "days": [
       "IN",
@@ -309,7 +585,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      2,
+      0,
+      2,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 10,
+    "avgDestruction": 0
   },
   {
     "name": "Riza",
@@ -322,7 +610,19 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      3,
+      2,
+      2,
+      1,
+      1,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 12,
+    "avgDestruction": 0
   },
   {
     "name": "Mentisar Ahmed",
@@ -330,38 +630,74 @@ window.PODCLASH_FALLBACK = [
     "days": [
       "IN",
       "IN",
+      "IN_NA",
       "IN",
       "IN",
       "IN",
-      "IN",
-      "IN"
-    ]
+      "OUT"
+    ],
+    "stars": [
+      3,
+      3,
+      "IN_NA",
+      1,
+      1,
+      2,
+      "OUT"
+    ],
+    "dashboardTotalWarsIn": 5,
+    "dashboardTotalStars": 10,
+    "avgDestruction": 0
   },
   {
-    "name": "YANTOTSGH",
+    "name": "YANTOTSIGH",
     "th": 12,
     "days": [
       "OUT",
       "OUT",
       "OUT",
       "IN",
-      "IN",
+      "IN_NA",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      "OUT",
+      "OUT",
+      "OUT",
+      0,
+      "IN_NA",
+      1,
+      0
+    ],
+    "dashboardTotalWarsIn": 3,
+    "dashboardTotalStars": 1,
+    "avgDestruction": 0
   },
   {
-    "name": "ANU",
+    "name": "aNU",
     "th": 11,
     "days": [
       "IN",
       "IN",
       "IN",
-      "OUT",
+      "IN",
       "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      3,
+      2,
+      2,
+      1,
+      3,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 7,
+    "dashboardTotalStars": 11,
+    "avgDestruction": 0
   },
   {
     "name": "satria",
@@ -372,12 +708,24 @@ window.PODCLASH_FALLBACK = [
       "OUT",
       "OUT",
       "OUT",
-      "OUT",
+      "IN",
       "OUT"
-    ]
+    ],
+    "stars": [
+      3,
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT",
+      0,
+      "OUT"
+    ],
+    "dashboardTotalWarsIn": 2,
+    "dashboardTotalStars": 3,
+    "avgDestruction": 0
   },
   {
-    "name": "Iasyakka",
+    "name": "lasyakka",
     "th": 11,
     "days": [
       "IN_NA",
@@ -385,22 +733,46 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "OUT",
-      "IN",
-      "OUT"
-    ]
+      "OUT",
+      "IN"
+    ],
+    "stars": [
+      "IN_NA",
+      "OUT",
+      1,
+      2,
+      "OUT",
+      "OUT",
+      0
+    ],
+    "dashboardTotalWarsIn": 3,
+    "dashboardTotalStars": 3,
+    "avgDestruction": 0
   },
   {
     "name": "bangboyy.",
     "th": 11,
     "days": [
       "OUT",
+      "IN_NA",
+      "OUT",
       "IN",
-      "OUT",
-      "OUT",
-      "OUT",
+      "IN",
       "IN",
       "IN"
-    ]
+    ],
+    "stars": [
+      "OUT",
+      "IN_NA",
+      "OUT",
+      2,
+      2,
+      0,
+      0
+    ],
+    "dashboardTotalWarsIn": 4,
+    "dashboardTotalStars": 4,
+    "avgDestruction": 0
   },
   {
     "name": "JUSTIN",
@@ -409,37 +781,73 @@ window.PODCLASH_FALLBACK = [
       "IN",
       "IN",
       "IN",
-      "IN",
+      "OUT",
       "IN",
       "OUT",
-      "OUT"
-    ]
+      "IN"
+    ],
+    "stars": [
+      3,
+      3,
+      1,
+      "OUT",
+      3,
+      "OUT",
+      0
+    ],
+    "dashboardTotalWarsIn": 5,
+    "dashboardTotalStars": 10,
+    "avgDestruction": 0
   },
   {
-    "name": "Raviel Seiyoku",
+    "name": "Raviel Séiyoku",
     "th": 9,
     "days": [
       "OUT",
       "IN",
       "IN",
-      "IN",
-      "IN",
+      "OUT",
+      "OUT",
+      "OUT",
+      "IN"
+    ],
+    "stars": [
+      "OUT",
+      3,
+      1,
+      "OUT",
+      "OUT",
       "OUT",
       "OUT"
-    ]
+    ],
+    "dashboardTotalWarsIn": 3,
+    "dashboardTotalStars": 4,
+    "avgDestruction": 0
   },
   {
-    "name": "V!NooGaRoXs",
+    "name": "ViNooGaRoXs",
     "th": 8,
     "days": [
       "OUT",
       "OUT",
       "OUT",
       "OUT",
-      "IN",
-      "IN",
-      "IN"
-    ]
+      "OUT",
+      "OUT",
+      "OUT"
+    ],
+    "stars": [
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT",
+      0
+    ],
+    "dashboardTotalWarsIn": 0,
+    "dashboardTotalStars": 0,
+    "avgDestruction": 0
   },
   {
     "name": "Raja NamBrud",
@@ -452,10 +860,22 @@ window.PODCLASH_FALLBACK = [
       "OUT",
       "OUT",
       "OUT"
-    ]
+    ],
+    "stars": [
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT"
+    ],
+    "dashboardTotalWarsIn": 0,
+    "dashboardTotalStars": 0,
+    "avgDestruction": 0
   },
   {
-    "name": "★King-Store★",
+    "name": "★King-_-Store★",
     "th": 11,
     "days": [
       "OUT",
@@ -465,6 +885,18 @@ window.PODCLASH_FALLBACK = [
       "OUT",
       "OUT",
       "OUT"
-    ]
+    ],
+    "stars": [
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT",
+      "OUT"
+    ],
+    "dashboardTotalWarsIn": 0,
+    "dashboardTotalStars": 0,
+    "avgDestruction": 0
   }
 ];

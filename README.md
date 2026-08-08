@@ -1,60 +1,65 @@
-# POD CLASH — Globe Homie
+# POD CLASH — Globe Homie CWL v4
 
-Static GitHub Pages website synchronized from the Google Sheets tab:
+This version merges three Google Sheets tabs:
 
-`7-Day Rolling Schedule`
+- `CWL Dashboard`
+- `7-Day Rolling Schedule`
+- `Total Stars`
 
-## Files
+## Data logic
 
-- `index.html` — page structure and static Day 3 fallback
-- `styles.css` — responsive desktop/mobile design
-- `config.js` — spreadsheet, timing, clan links, and refresh configuration
-- `fallback-data.js` — last-known schedule used if Google Sheets cannot be reached
-- `app.js` — CSV synchronization, search, day filtering, member drawer/bottom sheet, refresh, and countdown
-- `.nojekyll` — tells GitHub Pages to serve the files directly
+- `Game Pref` is intentionally ignored.
+- Schedule `IN` = eligible attack.
+- `IN - N/A` = in lineup, no attack.
+- `OUT` = resting / not in lineup.
+- Stars `0` = completed attack with zero stars.
+- Blank star cell = pending / not entered.
+- Upcoming days always display `UPCOMING —`.
+- Total leaderboard includes all registered members.
+- Daily leaderboard only includes members with schedule status `IN`.
 
-## Google Sheets requirement
+## Performance ranking
 
-The spreadsheet/tab must be publicly readable. In Google Sheets on desktop:
+Total performance is sorted by:
 
-1. Open the spreadsheet.
-2. Select **File → Share → Publish to web**.
-3. Select the `7-Day Rolling Schedule` tab.
-4. Publish it.
-5. Do not publish private or sensitive information.
+1. Stars per completed attack
+2. Avg Destruction %
+3. Total Stars
+4. Completed attack count
 
-The website reads this endpoint automatically:
+## CWL timing
 
-`https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/gviz/tq?tqx=out:csv&sheet=SHEET_NAME`
+Fallback:
+`Day 1 Start = 2026-08-02 19:58 GMT+7`
 
-If the live request fails, the page keeps showing `fallback-data.js` and reports **Using saved fallback**.
+This produces:
+`Day 6 End = 2026-08-08 19:58 GMT+7`
 
-## Updating configuration
+Optional live spreadsheet override:
+add a row to `CWL Dashboard`:
 
-Edit `config.js` if the spreadsheet ID, tab name, clan links, or Day 3 ending time changes.
+`CWL DAY 1 START | 2026-08-02T19:58:00+07:00`
 
-## Expected sheet headers
+The website will use that timestamp when the row is present.
 
-The parser searches for a row containing:
+## Google Sheets publishing
 
-`Member Name | Town Hall | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 | Day 6 | Day 7`
+All three tabs must be publicly readable through Google Sheets GViz CSV.
 
-Rows after that header are read until `TOTAL ACTIVE...`.
+The app refreshes all three every 60 seconds and falls back to `fallback-data.js` if live loading fails.
 
-Accepted status values:
+## GitHub Pages
 
-- `IN`
-- `OUT`
-- `IN - N/A` (shown as IN / NO ATTACK)
+Upload all files in this folder to the repository root:
 
-## Local preview
+- `index.html`
+- `styles.css`
+- `app.js`
+- `config.js`
+- `fallback-data.js`
+- `.nojekyll`
+- `CNAME` if using `podclash.lyvrastudio.com`
 
-For full JavaScript behavior, serve the folder over HTTP. Do not rely on iPhone Quick Look for testing.
+For the custom domain, `CNAME` should contain only:
 
-Example:
-
-```bash
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
+`podclash.lyvrastudio.com`
